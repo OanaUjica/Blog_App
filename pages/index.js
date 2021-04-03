@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -9,9 +11,22 @@ export default function Home() {
       </Head>
 
       <main>
+        <Image
+            src="/images/profile.jpg" // Route of the image file
+            height={200} // Desired size with correct aspect ratio
+            width={144} // Desired size with correct aspect ratio
+            alt="Oana Ujica"
+          />
         <h1 className="title">
           Welcome to <a href="https://github.com/OanaUjica" target="_blank">Oana's portfolio</a>
         </h1>
+
+        <p className="title">
+          Read{' '}
+          <Link href="/posts/first-post">
+            <a>this page!</a>
+          </Link>
+        </p>
 
         <p className="description">
           Get started by editing <code>pages/index.js</code>
